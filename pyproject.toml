@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wavesim"
+version = "0.1.0"
+description = "GPU-friendly scalar wave propagation simulator for custom-designed phase maps"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+tiff = ["tifffile"]
+
+[tool.setuptools.packages.find]
+include = ["wavesim*"]
